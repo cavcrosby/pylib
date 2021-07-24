@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pylib-cavcrosby"
-version = "0.0.1"
+version = "0.0.2"
 description = "A personal library of frequently used python code"
 authors = ["Conner Crosby <conner@cavcrosby.tech>"]
 license = "MIT"
@@ -11,10 +11,12 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.8"
 requests = "^2.25.1"
+GitPython = "^3.1.18"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.9.2"
 black = "^21.6b0"
+flake8-docstrings = "^1.6.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
