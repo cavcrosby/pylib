@@ -23,7 +23,7 @@ class CustomHelpFormatter(argparse.HelpFormatter):
     """
 
     def _get_first_nonprefix_char(self, action):
-        """Retrieve said character from an action's option_string.
+        """Retrieve said character from an action's option string.
         
         This applies to an action's first option string. Regardless
         if it is a long option or a short option.
@@ -31,19 +31,26 @@ class CustomHelpFormatter(argparse.HelpFormatter):
         Parameters
         ----------
         action : argparse._ArgumentGroup
-            The action with its option_strings.
+            The action with its option strings.
 
         Returns
         -------
         str
-            The first nonprefix character found from an option string.
+            The first nonprefix character found from an option string, or
+            in the case the action does not contain an option string, the full
+            positional argument label.
 
         """
-        option_string = action.option_strings[0]
-        prefix_char = option_string[0]  # '-h' ==> '-'
-        return option_string[
-            option_string.rfind(prefix_char) :  # noqa: E203,E501
-        ][1]
+        try:
+            option_string = action.option_strings[0]
+            prefix_char = option_string[0]  # '-h' ==> '-'
+            return option_string[
+                option_string.rfind(prefix_char) :  # noqa: E203,E501
+            ][1]
+        except IndexError:
+            # Positional args do not contain option_strings, so best
+            # to just sort them by their full label.
+            return action.dest
 
     def add_arguments(self, actions):
         """Extend the parent's method in adding actions to help message.
