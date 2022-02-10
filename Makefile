@@ -6,7 +6,7 @@ include python.mk
 VIRTUALENV_PYTHON_VERSION = 3.8.2
 
 # simply expanded variables
-override executables := \
+executables := \
 	${python_executables}
 
 _check_executables := $(foreach exec,${executables},$(if $(shell command -v ${exec}),pass,$(error "No ${exec} in PATH")))
