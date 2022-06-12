@@ -6,6 +6,7 @@ exported:
 pylib.argparse
 pylib.git
 pylib.githubauth
+pylib.versions
 
 """
 # Standard Library Imports
@@ -16,3 +17,4 @@ pylib.githubauth
 import pylib.argparse  # noqa: F401 made available when importing package
 import pylib.git  # noqa: F401 made available when importing package
 import pylib.githubauth  # noqa: F401 made available when importing package
+import pylib.versions  # noqa: F401 made available when importing package
