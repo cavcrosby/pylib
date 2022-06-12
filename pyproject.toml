@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pylib-cavcrosby"
-version = "0.0.5"
+version = "0.0.6"
 description = "A personal library of frequently used python code"
 authors = ["Conner Crosby <conner@cavcrosby.tech>"]
 license = "MIT"
