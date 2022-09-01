@@ -52,7 +52,7 @@ class Version:
                 and greatest != VersionUpdateTypes.MINOR  # noqa: W503
                 and greatest != VersionUpdateTypes.MAJOR  # noqa: W503
             ):
-                pass
+                greatest = VersionUpdateTypes.RESEAT
             elif version == VersionUpdateTypes.PATCH and (
                 greatest != VersionUpdateTypes.MINOR
                 and greatest != VersionUpdateTypes.MAJOR  # noqa: W503
