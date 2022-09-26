@@ -2,8 +2,6 @@ include base.mk
 
 # include other generic makefiles
 include python.mk
-# overrides defaults set by included makefiles
-VIRTUALENV_PYTHON_VERSION = 3.8.2
 
 # simply expanded variables
 executables := \
