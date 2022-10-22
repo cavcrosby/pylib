@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pylib-cavcrosby"
-version = "0.0.7"
+version = "0.0.8"
 description = "A personal library of frequently used python code"
 authors = ["Conner Crosby <conner@cavcrosby.tech>"]
 license = "MIT"
@@ -9,7 +9,7 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = "~3.8"
+python = "~3.9"
 requests = "^2.25.1"
 GitPython = "^3.1.18"
 
